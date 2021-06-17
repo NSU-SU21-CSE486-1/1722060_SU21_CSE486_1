@@ -16,7 +16,7 @@
 <p align="center"><strong><u>Member 1</u></strong><u>:</u></p>
 <p align="center"><strong>Name</strong><strong>:</strong> Sumiya Sadia</p>
 <p align="center"><strong>ID</strong><strong>:&nbsp; </strong>1722060042</p>
-<p align="center"><strong>Email</strong><strong>:</strong> <a href="sumiya.sadia@northsouth.edu">abc.def@northsouth.edu</a></p>
+<p align="center"><strong>Email</strong><strong>:</strong> <a href="sumiya.sadia@northsouth.edu">sumiya.sadia@northsouth.edu</a></p>
 
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SP21-CSE486-1/1234567-SP21-CSE486-S01">https://github.com/NSU-SP21-CSE486-1/1234567-SP21-CSE486-S01</a></p>
 
