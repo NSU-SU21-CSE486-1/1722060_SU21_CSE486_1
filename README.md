@@ -20,7 +20,7 @@
 
 <p align="center"><strong>Git Repository</strong><strong>: </strong><a href="https://github.com/NSU-SU21-CSE486-1/1722060_SU21_CSE486_1">https://github.com/NSU-SU21-CSE486-1/1722060_SU21_CSE486_1</a></p>
 
-<p align="center"><strong>Date Prepared</strong><strong>: </strong>March 03, 2021</p>
+<p align="center"><strong>Date Prepared</strong><strong>: </strong>June 17, 2021</p>
 <p><strong>&nbsp;</strong></p>
 <p><strong>&nbsp;</strong></p>
 
