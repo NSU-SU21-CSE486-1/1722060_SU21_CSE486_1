@@ -13,9 +13,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("MainActivity", "Happy Birthday to Sazia");
-        try{}
+        try{
+            int number = 10;
+            int result = number / 0;
+        }
         catch(Exception e){
-            Log.e("MainActivity", "Happy Birthday to Sazia");
+            Log.e("MainActivity", "Oops! You've ran into an error");
         }
     }
 }
