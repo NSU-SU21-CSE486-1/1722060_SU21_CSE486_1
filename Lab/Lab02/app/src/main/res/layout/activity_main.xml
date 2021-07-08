@@ -21,7 +21,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="launchSecondActivity" />
 
     <Button
         android:id="@+id/button_text_three"
@@ -38,7 +39,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="launchSecondActivity" />
 
     <Button
         android:id="@+id/button_text_two"
@@ -55,5 +57,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_text_one" />
+        app:layout_constraintTop_toBottomOf="@+id/button_text_one"
+        android:onClick="launchSecondActivity" />
 </androidx.constraintlayout.widget.ConstraintLayout>
