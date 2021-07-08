@@ -2,6 +2,7 @@ package com.android.sadia.twoactivities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -13,13 +14,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void launchSecondActivity(View view) {
-
+    public void launchSecondActivityOne(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
-    public void launchSecondActivity2(View view) {
+    public void launchSecondActivityThree(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
     }
 
-    public void launchSecondActivity3(View view) {
+    public void launchSecondActivityTwo(View view) {
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+
     }
 }
