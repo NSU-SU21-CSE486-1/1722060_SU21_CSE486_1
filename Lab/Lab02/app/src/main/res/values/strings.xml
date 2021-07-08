@@ -16,4 +16,5 @@
         Nulla malesuada nibh vitae est viverra luctus. Ut a accumsan tellus. Vestibulum vestibulum est nec laoreet
         ultrices. Morbi vel dolor consectetur, tempor elit vel, ullamcorper orci. Nullam ac ligula sed augue hendrerit
         consectetur in nec risus. Integer et ex mauris. Morbi quis metus at ante vestibulum gravida.</string>
+    <string name="scroll_message">Congratulations! You have pressed a button.</string>
 </resources>
