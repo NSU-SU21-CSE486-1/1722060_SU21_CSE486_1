@@ -40,7 +40,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        android:onClick="launchSecondActivity" />
+        android:onClick="launchSecondActivity3" />
 
     <Button
         android:id="@+id/button_text_two"
@@ -50,7 +50,7 @@
         android:layout_marginEnd="16dp"
         android:background="@color/design_default_color_primary"
         android:fontFamily="sans-serif-medium"
-        android:onClick="launchSecondActivity"
+        android:onClick="launchSecondActivity2"
         android:text="Text Two"
         android:textColor="@android:color/white"
         android:textSize="16sp"
