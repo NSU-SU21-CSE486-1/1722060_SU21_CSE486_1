@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import static android.widget.RatingBar.*;
 
 
@@ -100,7 +102,9 @@ public class SimpleFragment extends Fragment {
 
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                String myRating = (getString(R.string.my_rating) + String.valueOf(ratingBar.getRating()));
 
+                Toast.makeText(getContext(), myRating, Toast.LENGTH_SHORT).show();
             }
         });
 
