@@ -7,6 +7,24 @@
     tools:context=".UniversityAffiliation">
 
 
+    <Button
+        android:id="@+id/next3"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/poppins_semibold"
+        android:onClick="launchStudentInformation"
+        android:text="@string/next"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#9A8B8B"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_study_level" />
+
     <TextView
         android:id="@+id/show_name"
         android:layout_width="wrap_content"
@@ -95,5 +113,52 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toEndOf="@+id/show_blood_group"
         app:layout_constraintTop_toBottomOf="@+id/nid_field" />
+
+    <EditText
+        android:id="@+id/input_university_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="University"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
+
+    <EditText
+        android:id="@+id/input_department"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Department"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/input_university_name"
+        app:layout_constraintStart_toStartOf="@+id/input_university_name"
+        app:layout_constraintTop_toBottomOf="@+id/input_university_name" />
+
+    <EditText
+        android:id="@+id/input_student_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Student ID"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/input_department"
+        app:layout_constraintTop_toBottomOf="@+id/input_department" />
+
+    <EditText
+        android:id="@+id/input_study_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="Study Level"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/input_student_id"
+        app:layout_constraintStart_toStartOf="@+id/input_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/input_student_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
