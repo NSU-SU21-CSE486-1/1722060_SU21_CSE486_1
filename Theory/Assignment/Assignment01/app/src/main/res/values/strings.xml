@@ -8,4 +8,15 @@
     <string name="sign_up">Sign Up</string>
     <string name="text_header">Successful!</string>
     <string name="textview">TextView</string>
+    <string name="username">Name:</string>
+    <string name="NID_number">NID Number:</string>
+    <string name="Blood_group">Blood Group:</string>
+    <string name="university">University</string>
+    <string name="department">Department</string>
+    <string name="student_id">Student ID</string>
+    <string name="study_level">Study Level</string>
+    <string name="university_option">University:</string>
+    <string name="department_option">Department:</string>
+    <string name="student_id_option">Student ID:</string>
+    <string name="study_level_option">Study Level:</string>
 </resources>

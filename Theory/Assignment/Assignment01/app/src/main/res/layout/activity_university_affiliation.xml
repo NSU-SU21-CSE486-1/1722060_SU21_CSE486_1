@@ -32,7 +32,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Name:"
+        android:text="@string/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Date of Birth"
+        android:text="@string/date_of_birth"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_name"
         app:layout_constraintTop_toBottomOf="@+id/show_name" />
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="NID Number: "
+        android:text="@string/NID_number"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_dob"
         app:layout_constraintTop_toBottomOf="@+id/show_dob" />
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Blood Group:"
+        android:text="@string/Blood_group"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_nid"
         app:layout_constraintTop_toBottomOf="@+id/show_nid" />
@@ -121,7 +121,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="University"
+        android:hint="@string/university"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
@@ -132,7 +132,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Department"
+        android:hint="@string/department"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/input_university_name"
         app:layout_constraintStart_toStartOf="@+id/input_university_name"
@@ -144,7 +144,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Student ID"
+        android:hint="@string/student_id"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/input_department"
         app:layout_constraintTop_toBottomOf="@+id/input_department" />
@@ -155,7 +155,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:hint="Study Level"
+        android:hint="@string/study_level"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/input_student_id"
         app:layout_constraintStart_toStartOf="@+id/input_student_id"
