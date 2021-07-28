@@ -27,13 +27,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="50dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/name"
+        android:hint="@string/name"
+        android:inputType="textLongMessage|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in" />
 
@@ -43,8 +43,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/date_of_birth"
+        android:hint="@string/date_of_birth"
+        android:inputType="date|textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/input_name"
         app:layout_constraintStart_toStartOf="@+id/input_name"
         app:layout_constraintTop_toBottomOf="@+id/input_name" />
@@ -55,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/nid_number"
+        android:hint="@string/nid_number"
+        android:inputType="number|textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/input_DoB"
         app:layout_constraintStart_toStartOf="@+id/input_DoB"
         app:layout_constraintTop_toBottomOf="@+id/input_DoB" />
@@ -67,8 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/blood_group"
+        android:hint="@string/blood_group"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/input_NID"
         app:layout_constraintStart_toStartOf="@+id/input_NID"
         app:layout_constraintTop_toBottomOf="@+id/input_NID" />
@@ -89,6 +89,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_blood_group"
         android:background="@drawable/custom_button"
+        android:onClick="launchUniversityAffiliation"
         android:textColor="#FFFFFF"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
