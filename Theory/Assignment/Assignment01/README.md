@@ -17,4 +17,4 @@ The Main activity has four fields that ask user's to fill in their Name, Date of
 
 While showing the users' information the output shows the last intent's  extra message in all fields. This is a bug to my code, and I have not found a solution for fixing it yet.
 
-There is two more activities left to still work on. 
+There is two more activities left to still work on. The "Second Activity" withh show previous informations as well as take the user's Email address, and Phone number as input. The "Final Activity" will finally output all information about the user.
