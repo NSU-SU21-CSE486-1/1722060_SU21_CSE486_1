@@ -2,6 +2,7 @@ package com.android.sadia.droidcafe;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -26,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void showFroyoOrder(View view) {
         displayToast(getString(R.string.froyo_order_message));
+    }
+
+    public void onClick(View view) {
+        Intent intent = new Intent(MainActivity.this, OrderActivity.class);
+        startActivity(intent);
     }
 
 
