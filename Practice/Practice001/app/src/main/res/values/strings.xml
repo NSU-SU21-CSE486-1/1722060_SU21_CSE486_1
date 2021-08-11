@@ -17,4 +17,10 @@
     <string name="pick_up">Pick up</string>
     <string name="phone_label_text">Phone</string>
     <string name="enter_phone_hint">Enter phone</string>
+    <string-array name="labels_array">
+        <item>Home</item>
+        <item>Work</item>
+        <item>Mobile</item>
+        <item>Other</item>
+    </string-array>
 </resources>
