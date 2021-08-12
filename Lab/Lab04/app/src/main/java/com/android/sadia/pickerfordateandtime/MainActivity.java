@@ -8,15 +8,20 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.BreakIterator;
 import java.text.DateFormat;
 
 public class MainActivity extends AppCompatActivity {
+    TextView dateView, timeView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dateView = findViewById(R.id.date_chosen);
+        timeView= findViewById(R.id.time_chosen);
     }
+
 
     public void showDatePicker(View view) {
         DialogFragment newFragment = new DatePickerFragment();
@@ -29,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         String year_string = Integer.toString(year);
         String dateMessage = (day_string +
                 "/" + month_string + "/" + year_string);
+        dateView.setText(dateMessage);
         Toast.makeText(this, getString(R.string.date1) + dateMessage,
                 Toast.LENGTH_SHORT).show();
 
@@ -42,9 +48,8 @@ public class MainActivity extends AppCompatActivity {
     public void processTimePickerResult(int hourOfDay, int minute) {
         String hour_string = Integer.toString(hourOfDay);
         String minute_string = Integer.toString(minute);
-        // Assign the concatenated strings to timeMessage.
         String timeMessage = (hour_string + ":" + minute_string);
-
+        timeView.setText(timeMessage);
         Toast.makeText(this,getString(R.string.time1) + timeMessage,
                 Toast.LENGTH_SHORT).show();
     }
