@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity {
         String dateMessage = (day_string +
                 "/" + month_string + "/" + year_string);
         dateView.setText(dateMessage);
-        Toast.makeText(this, getString(R.string.date1) + dateMessage,
-                Toast.LENGTH_SHORT).show();
 
     }
 
@@ -50,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         String minute_string = Integer.toString(minute);
         String timeMessage = (hour_string + ":" + minute_string);
         timeView.setText(timeMessage);
-        Toast.makeText(this,getString(R.string.time1) + timeMessage,
-                Toast.LENGTH_SHORT).show();
+
     }
 
 }
