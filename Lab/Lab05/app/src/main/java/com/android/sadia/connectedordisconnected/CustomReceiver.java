@@ -15,7 +15,7 @@ public class CustomReceiver extends BroadcastReceiver {
 
         if (Intent.ACTION_HEADSET_PLUG.equals(intentAction)) {
             extraMessage = intent.getIntExtra("state", -1);
-            String toastMessage = "unknown intent action";
+            String toastMessage;
 
             switch(extraMessage){
                 case 0:
@@ -27,10 +27,12 @@ public class CustomReceiver extends BroadcastReceiver {
                     Headset_Plugged_in = true;
                     toastMessage = "Headset Connected!";
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + extraMessage);
             }
-
             Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
         }
 
     }
 }
+
