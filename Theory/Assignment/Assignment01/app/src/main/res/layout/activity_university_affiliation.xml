@@ -8,7 +8,7 @@
 
 
     <Button
-        android:id="@+id/next3"
+        android:id="@+id/next1"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:background="@drawable/custom_button"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/date_of_birth"
+        android:text="Date of Birth:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_name"
         app:layout_constraintTop_toBottomOf="@+id/show_name" />
@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/Blood_group"
+        android:text="Blood Group:"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_nid"
         app:layout_constraintTop_toBottomOf="@+id/show_nid" />
@@ -78,6 +78,7 @@
         android:layout_marginTop="30dp"
         android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_name"
         app:layout_constraintStart_toEndOf="@+id/show_name"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -89,6 +90,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_dob"
         app:layout_constraintStart_toEndOf="@+id/show_dob"
         app:layout_constraintTop_toBottomOf="@+id/name_field" />
 
@@ -100,6 +102,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_nid"
         app:layout_constraintStart_toEndOf="@+id/show_nid"
         app:layout_constraintTop_toBottomOf="@+id/dob_field" />
 
@@ -111,6 +114,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_blood_group"
         app:layout_constraintStart_toEndOf="@+id/show_blood_group"
         app:layout_constraintTop_toBottomOf="@+id/nid_field" />
 
@@ -122,7 +126,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/university"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
 
@@ -133,7 +137,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/department"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/input_university_name"
         app:layout_constraintStart_toStartOf="@+id/input_university_name"
         app:layout_constraintTop_toBottomOf="@+id/input_university_name" />
@@ -145,7 +149,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/student_id"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="@+id/input_department"
         app:layout_constraintTop_toBottomOf="@+id/input_department" />
 
@@ -153,11 +157,12 @@
         android:id="@+id/input_study_level"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28dp"
         android:ems="10"
         android:hint="@string/study_level"
-        android:inputType="textPersonName"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/input_student_id"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/input_student_id"
         app:layout_constraintTop_toBottomOf="@+id/input_student_id" />
 

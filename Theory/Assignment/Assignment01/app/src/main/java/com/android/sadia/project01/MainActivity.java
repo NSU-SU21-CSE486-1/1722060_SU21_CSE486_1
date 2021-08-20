@@ -15,16 +15,42 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE =
             "com.android.sadia.project01.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE1 =
+            "com.android.sadia.project01.extra.MESSAGE1";
+    public static final String EXTRA_MESSAGE2 =
+            "com.android.sadia.project01.extra.MESSAGE2";
+    public static final String EXTRA_MESSAGE3 =
+            "com.android.sadia.project01.extra.MESSAGE3";
+    public static final String EXTRA_MESSAGE4 =
+            "com.android.sadia.project01.extra.MESSAGE4";
+    public static final String EXTRA_MESSAGE5 =
+            "com.android.sadia.project01.extra.MESSAGE5";
+    public static final String EXTRA_MESSAGE6 =
+            "com.android.sadia.project01.extra.MESSAGE6";
+    public static final String EXTRA_MESSAGE7 =
+            "com.android.sadia.project01.extra.MESSAGE7";
+    public static final String EXTRA_MESSAGE8 =
+            "com.android.sadia.project01.extra.MESSAGE8";
+    public static final String EXTRA_MESSAGE9 =
+            "com.android.sadia.project01.extra.MESSAGE9";
+
+
+
     private EditText nameEditText;
     private EditText dobEditText;
     private EditText nidEditText;
     private EditText bloodGroupEditText;
     DatePickerDialog.OnDateSetListener setListener;
+    public String name_message;
+    public String dob_message;
+    public String nid_message;
+    public String bloodGroup_message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         nameEditText = findViewById(R.id.input_name);
         dobEditText = findViewById(R.id.input_DoB);
         nidEditText = findViewById(R.id.input_NID);
@@ -54,21 +80,24 @@ public class MainActivity extends AppCompatActivity {
 
     public void launchUniversityAffiliation(View view) {
         Intent intent = new Intent(this, UniversityAffiliation.class);
-        String name_message = nameEditText.getText().toString();
+
+        name_message = nameEditText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, name_message);
         startActivity(intent);
 
-        String dob_message = dobEditText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, dob_message);
+
+        dob_message = dobEditText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE1, dob_message);
         startActivity(intent);
 
-        String nid_message = nidEditText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, nid_message);
+
+        nid_message = nidEditText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE2, nid_message);
         startActivity(intent);
 
-        String bloodGroup_message = bloodGroupEditText.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, bloodGroup_message);
-        startActivity(intent);
 
+        bloodGroup_message = bloodGroupEditText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE3, bloodGroup_message);
+        startActivity(intent);
     }
 }
