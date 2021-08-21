@@ -6,29 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".FinalActivity">
 
-
-    <TextView
-        android:id="@+id/show_phone"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/phone_number"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="@+id/show_email"
-        app:layout_constraintTop_toBottomOf="@+id/show_email" />
-
-    <TextView
-        android:id="@+id/show_email"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_semibold"
-        android:text="@string/email_address"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="@+id/show_study_level"
-        app:layout_constraintTop_toBottomOf="@+id/show_study_level" />
-
     <TextView
         android:id="@+id/show_name"
         android:layout_width="wrap_content"
@@ -58,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/NID_number"
+        android:text="@string/nid_number"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_dob"
         app:layout_constraintTop_toBottomOf="@+id/show_dob" />
@@ -69,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="@string/blood_group"
+        android:text="@string/b_group"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="@+id/show_nid"
         app:layout_constraintTop_toBottomOf="@+id/show_nid" />
@@ -136,7 +113,7 @@
 
     <TextView
         android:id="@+id/show_department"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
@@ -219,29 +196,53 @@
         app:layout_constraintTop_toBottomOf="@+id/student_id_field" />
 
     <TextView
-        android:id="@+id/email_field"
+        android:id="@+id/show_email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/email_address_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_study_level"
+        app:layout_constraintStart_toStartOf="@+id/show_study_level"
+        app:layout_constraintTop_toBottomOf="@+id/show_study_level" />
+
+    <TextView
+        android:id="@+id/show_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/phone_number_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_email_address"
+        app:layout_constraintStart_toStartOf="@+id/show_email_address"
+        app:layout_constraintTop_toBottomOf="@+id/show_email_address" />
+
+    <TextView
+        android:id="@+id/email_address_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
-        android:textColor="#100F0F"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/show_email"
-        app:layout_constraintStart_toEndOf="@+id/show_email"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_email_address"
+        app:layout_constraintStart_toEndOf="@+id/show_email_address"
         app:layout_constraintTop_toBottomOf="@+id/study_level_field" />
 
     <TextView
-        android:id="@+id/phone_field"
+        android:id="@+id/phone_number_field"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_light"
-        android:textColor="#121111"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/show_phone"
-        app:layout_constraintStart_toEndOf="@+id/show_phone"
-        app:layout_constraintTop_toBottomOf="@+id/email_field" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_phone_number"
+        app:layout_constraintStart_toEndOf="@+id/show_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_field" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

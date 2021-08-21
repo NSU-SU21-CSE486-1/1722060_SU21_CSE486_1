@@ -20,11 +20,11 @@ public class FinalActivity extends AppCompatActivity {
     public String email_message;
     public String phone_message;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final);
+
 
         Intent intent = getIntent();
         name_message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -57,9 +57,9 @@ public class FinalActivity extends AppCompatActivity {
         textView5.setText(department_message);
 
         Intent intent6 = getIntent();
-        studentId_message = intent6.getStringExtra(UniversityAffiliation.EXTRA_MESSAGE6);
+        studentId_message  = intent6.getStringExtra(UniversityAffiliation.EXTRA_MESSAGE6);
         TextView textView6 = findViewById(R.id.student_id_field);
-        textView6.setText(studentId_message);
+        textView6.setText(studentId_message );
 
         Intent intent7 = getIntent();
         studyLevel_message = intent7.getStringExtra(UniversityAffiliation.EXTRA_MESSAGE7);
@@ -68,12 +68,12 @@ public class FinalActivity extends AppCompatActivity {
 
         Intent intent8 = getIntent();
         email_message = intent8.getStringExtra(SecondActivity.EXTRA_MESSAGE8);
-        TextView textView8 = findViewById(R.id.email_field);
+        TextView textView8 = findViewById(R.id.email_address_field);
         textView8.setText(email_message);
 
         Intent intent9 = getIntent();
         phone_message = intent9.getStringExtra(SecondActivity.EXTRA_MESSAGE9);
-        TextView textView9 = findViewById(R.id.phone_field);
+        TextView textView9 = findViewById(R.id.phone_number_field);
         textView9.setText(phone_message);
 
     }

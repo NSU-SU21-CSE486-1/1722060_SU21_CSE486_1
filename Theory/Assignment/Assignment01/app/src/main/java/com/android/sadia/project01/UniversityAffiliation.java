@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.text.BreakIterator;
 
 public class UniversityAffiliation extends AppCompatActivity {
+
     public static final String EXTRA_MESSAGE =
             "com.android.sadia.project01.extra.MESSAGE";
     public static final String EXTRA_MESSAGE1 =
@@ -33,6 +34,7 @@ public class UniversityAffiliation extends AppCompatActivity {
     public EditText departmentEditText;
     public EditText studentIdEditText;
     public EditText studyLevelEditText;
+
     public String name_message;
     public String dob_message;
     public String nid_message;
@@ -47,13 +49,6 @@ public class UniversityAffiliation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_university_affiliation);
-
-
-
-        uniNameEditText = findViewById(R.id.input_university_name);
-        departmentEditText = findViewById(R.id.input_department);
-        studentIdEditText = findViewById(R.id.input_student_id);
-        studyLevelEditText = findViewById(R.id.input_study_level);
 
 
         Intent intent = getIntent();
@@ -76,11 +71,29 @@ public class UniversityAffiliation extends AppCompatActivity {
         TextView textView3 = findViewById(R.id.blood_group_field);
         textView3.setText(bloodGroup_message);
 
+        uniNameEditText = findViewById(R.id.input_university_name);
+        departmentEditText = findViewById(R.id.input_department);
+        studentIdEditText = findViewById(R.id.input_student_id);
+        studyLevelEditText = findViewById(R.id.input_study_level);
+
     }
 
 
     public void launchStudentInformation(View view) {
         Intent intent = new Intent(this, StudentInformation.class);
+
+        intent.putExtra(EXTRA_MESSAGE, name_message);
+        startActivity(intent);
+
+        intent.putExtra(EXTRA_MESSAGE1, dob_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE2, nid_message);
+        startActivity(intent);
+
+        intent.putExtra(EXTRA_MESSAGE3, bloodGroup_message);
+        startActivity(intent);
 
 
         uniName_message = uniNameEditText.getText().toString();

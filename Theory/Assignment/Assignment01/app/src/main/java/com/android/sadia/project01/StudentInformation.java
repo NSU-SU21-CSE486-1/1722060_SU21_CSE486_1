@@ -10,6 +10,24 @@ import android.widget.TextView;
 
 public class StudentInformation extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE =
+            "com.android.sadia.project01.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE1 =
+            "com.android.sadia.project01.extra.MESSAGE1";
+    public static final String EXTRA_MESSAGE2 =
+            "com.android.sadia.project01.extra.MESSAGE2";
+    public static final String EXTRA_MESSAGE3 =
+            "com.android.sadia.project01.extra.MESSAGE3";
+    public static final String EXTRA_MESSAGE4 =
+            "com.android.sadia.project01.extra.MESSAGE4";
+    public static final String EXTRA_MESSAGE5 =
+            "com.android.sadia.project01.extra.MESSAGE5";
+    public static final String EXTRA_MESSAGE6 =
+            "com.android.sadia.project01.extra.MESSAGE6";
+    public static final String EXTRA_MESSAGE7 =
+            "com.android.sadia.project01.extra.MESSAGE7";
+
+
     public String name_message;
     public String dob_message;
     public String nid_message;
@@ -70,8 +88,36 @@ public class StudentInformation extends AppCompatActivity {
 
     public void launchSecondActivity(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
+
+        intent.putExtra(EXTRA_MESSAGE, name_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE1, dob_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE2, nid_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE3, bloodGroup_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE4, uniName_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE5, department_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE6, studentId_message);
+        startActivity(intent);
+
+
+        intent.putExtra(EXTRA_MESSAGE7, studyLevel_message);
         startActivity(intent);
     }
-
-
 }

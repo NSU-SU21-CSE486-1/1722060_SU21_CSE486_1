@@ -21,19 +21,6 @@ public class MainActivity extends AppCompatActivity {
             "com.android.sadia.project01.extra.MESSAGE2";
     public static final String EXTRA_MESSAGE3 =
             "com.android.sadia.project01.extra.MESSAGE3";
-    public static final String EXTRA_MESSAGE4 =
-            "com.android.sadia.project01.extra.MESSAGE4";
-    public static final String EXTRA_MESSAGE5 =
-            "com.android.sadia.project01.extra.MESSAGE5";
-    public static final String EXTRA_MESSAGE6 =
-            "com.android.sadia.project01.extra.MESSAGE6";
-    public static final String EXTRA_MESSAGE7 =
-            "com.android.sadia.project01.extra.MESSAGE7";
-    public static final String EXTRA_MESSAGE8 =
-            "com.android.sadia.project01.extra.MESSAGE8";
-    public static final String EXTRA_MESSAGE9 =
-            "com.android.sadia.project01.extra.MESSAGE9";
-
 
 
     private EditText nameEditText;
@@ -41,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText nidEditText;
     private EditText bloodGroupEditText;
     DatePickerDialog.OnDateSetListener setListener;
+
     public String name_message;
     public String dob_message;
     public String nid_message;
