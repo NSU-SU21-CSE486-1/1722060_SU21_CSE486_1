@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FinalActivity">
+
+    <TextView
+        android:id="@+id/show_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/show_dob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/date_of_birth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/show_name"
+        app:layout_constraintTop_toBottomOf="@+id/show_name" />
+
+    <TextView
+        android:id="@+id/show_nid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/nid_number"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/show_dob"
+        app:layout_constraintTop_toBottomOf="@+id/show_dob" />
+
+    <TextView
+        android:id="@+id/show_blood_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/b_group"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/show_nid"
+        app:layout_constraintTop_toBottomOf="@+id/show_nid" />
+
+    <TextView
+        android:id="@+id/name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_name"
+        app:layout_constraintStart_toEndOf="@+id/show_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dob_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_dob"
+        app:layout_constraintStart_toEndOf="@+id/show_dob"
+        app:layout_constraintTop_toBottomOf="@+id/name_field" />
+
+    <TextView
+        android:id="@+id/nid_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_nid"
+        app:layout_constraintStart_toEndOf="@+id/show_nid"
+        app:layout_constraintTop_toBottomOf="@+id/dob_field" />
+
+    <TextView
+        android:id="@+id/blood_group_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_blood_group"
+        app:layout_constraintStart_toEndOf="@+id/show_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/nid_field" />
+
+    <TextView
+        android:id="@+id/show_university"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/university_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_blood_group"
+        app:layout_constraintStart_toStartOf="@+id/show_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
+
+    <TextView
+        android:id="@+id/show_department"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/department_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_university"
+        app:layout_constraintStart_toStartOf="@+id/show_university"
+        app:layout_constraintTop_toBottomOf="@+id/show_university" />
+
+    <TextView
+        android:id="@+id/show_student_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/student_id_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_department"
+        app:layout_constraintStart_toStartOf="@+id/show_department"
+        app:layout_constraintTop_toBottomOf="@+id/show_department" />
+
+    <TextView
+        android:id="@+id/show_study_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/study_level_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_student_id"
+        app:layout_constraintStart_toStartOf="@+id/show_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/show_student_id" />
+
+    <TextView
+        android:id="@+id/university_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_university"
+        app:layout_constraintStart_toEndOf="@+id/show_university"
+        app:layout_constraintTop_toBottomOf="@+id/blood_group_field" />
+
+    <TextView
+        android:id="@+id/department_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_department"
+        app:layout_constraintStart_toEndOf="@+id/show_department"
+        app:layout_constraintTop_toBottomOf="@+id/university_field" />
+
+    <TextView
+        android:id="@+id/student_id_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_student_id"
+        app:layout_constraintStart_toEndOf="@+id/show_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/department_field" />
+
+    <TextView
+        android:id="@+id/study_level_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_study_level"
+        app:layout_constraintStart_toEndOf="@+id/show_study_level"
+        app:layout_constraintTop_toBottomOf="@+id/student_id_field" />
+
+    <TextView
+        android:id="@+id/show_email_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/email_address_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_study_level"
+        app:layout_constraintStart_toStartOf="@+id/show_study_level"
+        app:layout_constraintTop_toBottomOf="@+id/show_study_level" />
+
+    <TextView
+        android:id="@+id/show_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/phone_number_option"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="@+id/show_email_address"
+        app:layout_constraintStart_toStartOf="@+id/show_email_address"
+        app:layout_constraintTop_toBottomOf="@+id/show_email_address" />
+
+    <TextView
+        android:id="@+id/email_address_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_email_address"
+        app:layout_constraintStart_toEndOf="@+id/show_email_address"
+        app:layout_constraintTop_toBottomOf="@+id/study_level_field" />
+
+    <TextView
+        android:id="@+id/phone_number_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_light"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/show_phone_number"
+        app:layout_constraintStart_toEndOf="@+id/show_phone_number"
+        app:layout_constraintTop_toBottomOf="@+id/email_address_field" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
