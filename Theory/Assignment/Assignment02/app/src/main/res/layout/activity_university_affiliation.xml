@@ -100,30 +100,6 @@
         app:layout_constraintTop_toBottomOf="@+id/nid_field" />
 
     <EditText
-        android:id="@+id/input_university_name"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/university"
-        android:inputType="text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
-
-    <EditText
-        android:id="@+id/input_department"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/department"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/input_university_name"
-        app:layout_constraintStart_toStartOf="@+id/input_university_name"
-        app:layout_constraintTop_toBottomOf="@+id/input_university_name" />
-
-    <EditText
         android:id="@+id/input_student_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -131,21 +107,9 @@
         android:ems="10"
         android:hint="@string/student_id"
         android:inputType="number"
-        app:layout_constraintStart_toStartOf="@+id/input_department"
-        app:layout_constraintTop_toBottomOf="@+id/input_department" />
-
-    <EditText
-        android:id="@+id/input_study_level"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="@string/study_level"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/input_student_id"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/input_student_id"
-        app:layout_constraintTop_toBottomOf="@+id/input_student_id" />
+        app:layout_constraintEnd_toEndOf="@+id/spinner_department"
+        app:layout_constraintStart_toStartOf="@+id/spinner_department"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_department" />
 
     <Button
         android:id="@+id/next1"
@@ -163,6 +127,36 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_study_level" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner_study_level" />
+
+    <Spinner
+        android:id="@+id/spinner_university"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="@+id/show_blood_group"
+        app:layout_constraintStart_toStartOf="@+id/show_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/show_blood_group" />
+
+    <Spinner
+        android:id="@+id/spinner_department"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_university"
+        app:layout_constraintStart_toStartOf="@+id/spinner_university"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_university" />
+
+    <Spinner
+        android:id="@+id/spinner_study_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textAlignment="gravity"
+        app:layout_constraintEnd_toEndOf="@+id/input_student_id"
+        app:layout_constraintStart_toStartOf="@+id/input_student_id"
+        app:layout_constraintTop_toBottomOf="@+id/input_student_id" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
