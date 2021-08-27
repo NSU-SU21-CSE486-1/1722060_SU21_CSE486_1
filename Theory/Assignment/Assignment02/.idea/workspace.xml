@@ -44,7 +44,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-08-21T14:41:13.228889900Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mytabdemoapp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Practice/Practice001" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.1259192489">
@@ -161,10 +161,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="480" y="184" key="Downloadable.Font.Dialog.Size/0.0.1600.860@0.0.1600.860" timestamp="1627485523273" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1630075632107">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1630079616756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1630075632107" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1630079616756" />
     <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1629415477712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -181,10 +181,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1629415477712" />
-    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1630028815530">
+    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1630085732950">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1630028815530" />
+    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1630085732950" />
     <state x="502" y="0" width="1057" height="848" key="dock-window-1" timestamp="1629560866756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
