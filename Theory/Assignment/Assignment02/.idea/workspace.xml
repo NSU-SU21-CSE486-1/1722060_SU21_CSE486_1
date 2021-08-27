@@ -24,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="resourceFile" />
         <option value="valueResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,9 +44,12 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-08-21T14:41:13.228889900Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Practice/Practice001" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mytabdemoapp" />
   </component>
   <component name="RecentsManager">
+    <key name="android.template.1259192489">
+      <recent name="com.android.sadia.Project02" />
+    </key>
     <key name="android.template.-1212421100">
       <recent name="com.android.sadia.project01" />
     </key>
@@ -130,10 +133,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1630020239964">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1630071148071">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1630020239964" />
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1630071148071" />
     <state x="529" y="219" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1629416973263">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -158,10 +161,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="480" y="184" key="Downloadable.Font.Dialog.Size/0.0.1600.860@0.0.1600.860" timestamp="1627485523273" />
-    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1630020637739">
+    <state x="580" y="184" key="FileChooserDialogImpl" timestamp="1630075632107">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1630020637739" />
+    <state x="580" y="184" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1630075632107" />
     <state width="1557" height="222" key="GridCell.Tab.0.bottom" timestamp="1629415477712">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -178,10 +181,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1557" height="222" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1629415477712" />
-    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1630010143553">
+    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1630028815530">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1630010143553" />
+    <state x="617" y="343" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1630028815530" />
     <state x="502" y="0" width="1057" height="848" key="dock-window-1" timestamp="1629560866756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

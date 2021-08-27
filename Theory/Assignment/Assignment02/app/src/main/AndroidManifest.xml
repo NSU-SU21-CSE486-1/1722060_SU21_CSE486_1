@@ -11,7 +11,7 @@
         android:theme="@style/Theme.Project01">
 
 
-        <activity android:name="com.android.sadia.Project02.MainActivity">
+        <activity android:name=".UniCluBz">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,46 +19,47 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.android.sadia.Project02.UniversityAffiliation"
-            android:label = "University Affiliation"
-            android:parentActivityName="com.android.sadia.Project02.MainActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.android.sadia.Project02.MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Main Activity">
         </activity>
 
-        <activity android:name="com.android.sadia.Project02.StudentInformation"
-            android:label = "Student Information"
-            android:parentActivityName="com.android.sadia.Project02.UniversityAffiliation">
+        <activity
+            android:name=".UniversityAffiliation"
+            android:label="University Affiliation"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.android.sadia.Project02.MainActivity" />
+                android:value="com.android.sadia.Project02.MainActivity" />
         </activity>
-
-        <activity android:name="com.android.sadia.Project02.SecondActivity"
-            android:label = "Second Activity"
-            android:parentActivityName="com.android.sadia.Project02.StudentInformation">
+        <activity
+            android:name=".StudentInformation"
+            android:label="Student Information"
+            android:parentActivityName=".UniversityAffiliation">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.android.sadia.Project02.MainActivity" />
+                android:value="com.android.sadia.Project02.MainActivity" />
         </activity>
-
-        <activity android:name="com.android.sadia.Project02.FinalActivity"
-            android:label = "Final Activity"
-            android:parentActivityName="com.android.sadia.Project02.SecondActivity">
+        <activity
+            android:name=".SecondActivity"
+            android:label="Second Activity"
+            android:parentActivityName=".StudentInformation">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=
-                    "com.android.sadia.Project02.MainActivity" />
+                android:value="com.android.sadia.Project02.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FinalActivity"
+            android:label="Final Activity"
+            android:parentActivityName=".SecondActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.android.sadia.Project02.MainActivity" />
         </activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
     </application>
 
 </manifest>
