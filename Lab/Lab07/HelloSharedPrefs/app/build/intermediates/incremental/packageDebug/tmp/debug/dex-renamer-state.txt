@@ -1,4 +1,0 @@
-#Sun Aug 29 13:25:38 BDT 2021
-base.0=C\:\\Users\\sumiy\\Downloads\\android-fundamentals-starter-apps-v2-master\\HelloSharedPrefs\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-renamed.0=classes.dex
-path.0=classes.dex
