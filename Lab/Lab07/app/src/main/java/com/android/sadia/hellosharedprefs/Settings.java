@@ -34,6 +34,7 @@ public class Settings extends AppCompatActivity {
         mShowCountTextView = findViewById(R.id.count_textview);
         mColor = ContextCompat.getColor(this,
                 R.color.default_background);
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
         // Restore the saved instance state.
         if (savedInstanceState != null) {
@@ -47,7 +48,6 @@ public class Settings extends AppCompatActivity {
             mShowCountTextView.setBackgroundColor(mColor);
         }
 
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
     }
 
     public void changeBackground(View view) {
