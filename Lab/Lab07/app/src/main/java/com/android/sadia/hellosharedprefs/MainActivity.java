@@ -108,5 +108,6 @@ public class MainActivity extends AppCompatActivity {
     public void launchSettingsActivity(View view) {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
+
     }
 }
