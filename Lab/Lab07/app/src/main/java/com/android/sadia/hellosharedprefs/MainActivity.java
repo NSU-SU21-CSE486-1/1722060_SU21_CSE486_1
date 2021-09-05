@@ -1,6 +1,6 @@
 package com.android.sadia.hellosharedprefs;
 
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
@@ -29,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mPreferences;
 
     // Name of shared preferences file
-    private String sharedPrefFile =
-            "com.example.android.hellosharedprefs";
+    private String sharedPrefFile = "com.example.android.hellosharedprefs";
 
 
     @Override
