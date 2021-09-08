@@ -24,14 +24,10 @@ public class Settings extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener{
 
 
-    public static String COLOR_KEY = "color";
+    public static final String COUNT_KEY = "count" ;
+    public static final String COLOR_KEY = "color";
     private Spinner spinner;
     private EditText countEntry;
-
-
-    // Key for current count
-    private final String COUNT_KEY = "count";
-    // Key for current color
 
 
     private TextView mShowCountTextView;
