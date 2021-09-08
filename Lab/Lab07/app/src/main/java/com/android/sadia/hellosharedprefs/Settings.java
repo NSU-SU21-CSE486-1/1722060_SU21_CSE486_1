@@ -94,11 +94,27 @@ public class Settings extends AppCompatActivity implements
 
     }
 
-    public void resetSettings(View view){
+    public void reset(View view){
         setResult(RESULT_RESET, new Intent());
         finish();
     }
 
+    public void save(View view) {
+        Intent intent = new Intent();
+        intent.putExtra(COLOR_KEY, color);
+
+        String temp = countEntry.getText().toString();
+
+        if (!temp.equals("")){
+            intent.putExtra(COUNT_KEY, Integer.parseInt(temp));
+            intent.putExtra(LAST_COUNT, true);
+        }
+        else{
+            intent.putExtra(LAST_COUNT, false);
+        }
+        setResult(RESULT_OK, intent);
+        finish();
+    }
     @Override
     protected void onPause() {
         super.onPause();
