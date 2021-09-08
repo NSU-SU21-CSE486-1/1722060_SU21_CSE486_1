@@ -31,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     // Name of shared preferences file
     private String sharedPrefFile = "com.example.android.hellosharedprefs";
 
+    private int SETTINGS = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,27 +94,15 @@ public class MainActivity extends AppCompatActivity {
                 R.color.default_background);
         mShowCountTextView.setBackgroundColor(mColor);
 
-        // Clear preferences
-        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-        preferencesEditor.clear();
-        preferencesEditor.apply();
     }
 
     /**
      * Callback for activity pause.  Shared preferences are saved here.
      */
-    @Override
-    protected void onPause() {
-        super.onPause();
 
-        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-        preferencesEditor.putInt(COUNT_KEY, mCount);
-        preferencesEditor.putInt(COLOR_KEY, mColor);
-        preferencesEditor.apply();
-    }
 
     public void launchSettingsActivity(View view) {
         Intent intent = new Intent(this, Settings.class);
-        startActivity(intent);
+        startActivityForResult(intent, SETTINGS);
     }
 }

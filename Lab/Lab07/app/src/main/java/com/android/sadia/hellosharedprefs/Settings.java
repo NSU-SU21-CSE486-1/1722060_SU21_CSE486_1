@@ -19,18 +19,22 @@ import com.google.android.material.switchmaterial.SwitchMaterial;
 public class Settings extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener{
 
+    Spinner spinner;
+
 
     // Key for current count
-    private final String COUNT_KEY = "count";
+    public final String COUNT_KEY = "count";
     // Key for current color
-    private final String COLOR_KEY = "color";
+    public final String COLOR_KEY = "color";
 
-    private TextView mShowCountTextView;
+    public TextView mShowCountTextView;
 
-    private SharedPreferences mPreferences;
+    public SharedPreferences mPreferences;
+    public SharedPreferences.Editor preferencesEditor;
+    private String sharedPrefFile = "com.example.android.hellosharedprefs";
 
-    private SwitchMaterial switch1;
-    private SwitchMaterial switch2;
+    public SwitchMaterial switch1;
+    public SwitchMaterial switch2;
 
 
 
@@ -40,11 +44,15 @@ public class Settings extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        preferencesEditor = mPreferences.edit();
 
-        Spinner spinner = findViewById(R.id.color_spinner);
+
+        spinner = findViewById(R.id.color_spinner);
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
         }
+
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.colors_array, android.R.layout.simple_spinner_item);
 
@@ -75,5 +83,15 @@ public class Settings extends AppCompatActivity implements
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putInt(COUNT_KEY, mCount);
+        preferencesEditor.putInt(COLOR_KEY, mColor);
+        preferencesEditor.apply();
     }
 }
