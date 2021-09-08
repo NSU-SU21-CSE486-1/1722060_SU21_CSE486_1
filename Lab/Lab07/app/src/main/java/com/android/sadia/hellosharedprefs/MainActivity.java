@@ -96,14 +96,47 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /**
-     * Callback for activity pause.  Shared preferences are saved here.
-     */
-
-
     public void launchSettingsActivity(View view) {
         Intent intent = new Intent(this, Settings.class);
         startActivityForResult(intent, SETTINGS);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        if (requestCode == SETTINGS){
+            if (resultCode == RESULT_OK){
+                SharedPreferences.Editor preferenceEditor = mPreferences.edit()
+                switch(data.getStringExtra(Settings.COLOR_KEY)){
+                    case "Default":
+                        preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.default_background));
+                        mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.default_background));
+                        break;
+
+                    case "Black":
+                        preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.black));
+                        mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.black));
+                        break;
+
+                    case "Red":
+                        preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.red_background));
+                        mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.red_background));
+                        break;
+
+                    case "Blue":
+                        preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.blue_background));
+                        mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.blue_background));
+                        break;
+
+                    case "Green":
+                        preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.green_background));
+                        mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.green_background));
+                        break;
+
+                    default:
+                        break;
+                }
+            }
+        }
     }
 
 

@@ -23,19 +23,21 @@ import java.util.ArrayList;
 public class Settings extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener{
 
+
+    public static String COLOR_KEY = "color";
     private Spinner spinner;
     private EditText countEntry;
 
 
     // Key for current count
-    public final String COUNT_KEY = "count";
+    private final String COUNT_KEY = "count";
     // Key for current color
-    public final String COLOR_KEY = "color";
 
-    public TextView mShowCountTextView;
 
-    public SharedPreferences mPreferences;
-    public SharedPreferences.Editor preferencesEditor;
+    private TextView mShowCountTextView;
+
+    private SharedPreferences mPreferences;
+    private SharedPreferences.Editor preferencesEditor;
     private String sharedPrefFile = "com.example.android.hellosharedprefs";
 
     //public SwitchMaterial switch1;
@@ -94,7 +96,7 @@ public class Settings extends AppCompatActivity implements
 
     }
 
-    public void reset(View view){
+    public void resetPref(View view){
         setResult(RESULT_RESET, new Intent());
         finish();
     }
@@ -115,13 +117,5 @@ public class Settings extends AppCompatActivity implements
         setResult(RESULT_OK, intent);
         finish();
     }
-    @Override
-    protected void onPause() {
-        super.onPause();
 
-        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-        preferencesEditor.putInt(COUNT_KEY, mCount);
-        preferencesEditor.putInt(COLOR_KEY, mColor);
-        preferencesEditor.apply();
-    }
 }
