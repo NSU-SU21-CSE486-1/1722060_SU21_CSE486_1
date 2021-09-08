@@ -3,12 +3,14 @@ package com.android.sadia.hellosharedprefs;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -16,10 +18,13 @@ import android.widget.Toast;
 
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
+import java.util.ArrayList;
+
 public class Settings extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener{
 
-    Spinner spinner;
+    private Spinner spinner;
+    private EditText countEntry;
 
 
     // Key for current count
@@ -33,22 +38,34 @@ public class Settings extends AppCompatActivity implements
     public SharedPreferences.Editor preferencesEditor;
     private String sharedPrefFile = "com.example.android.hellosharedprefs";
 
-    public SwitchMaterial switch1;
-    public SwitchMaterial switch2;
+    //public SwitchMaterial switch1;
+    //public SwitchMaterial switch2;
 
+    private String color;
+    public static final String LAST_COUNT = "last count";
+    public static final int RESULT_RESET = -20;
 
+    //CORRECT_COUNT --> LAST_COUNT
 
+    private ArrayList<String> options = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        options.add("Default");
+        options.add("Black");
+        options.add("Red");
+        options.add("Blue");
+        options.add("Green");
+
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         preferencesEditor = mPreferences.edit();
 
-
+        countEntry = findViewById(R.id.count_edit_text);
         spinner = findViewById(R.id.color_spinner);
+
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
         }
@@ -63,26 +80,23 @@ public class Settings extends AppCompatActivity implements
             spinner.setAdapter(adapter);
         }
 
-        switch1 = findViewById(R.id.toggle_save);
-        switch2 = findViewById(R.id.toggle_reset);
-
     }
 
-
-    public void displayToast(String message) {
-        Toast.makeText(getApplicationContext(), message,
-                Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String spinnerLabel = adapterView.getItemAtPosition(i).toString();
-        displayToast(spinnerLabel);
+        color = options.get(pos);
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+        color = "Default";
 
+    }
+
+    public void resetSettings(View view){
+        setResult(RESULT_RESET, new Intent());
+        finish();
     }
 
     @Override
