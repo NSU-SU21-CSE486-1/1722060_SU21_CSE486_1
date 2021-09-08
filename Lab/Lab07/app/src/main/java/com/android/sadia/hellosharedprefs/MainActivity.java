@@ -102,11 +102,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
-        if (requestCode == SETTINGS){
-            if (resultCode == RESULT_OK){
-                SharedPreferences.Editor preferenceEditor = mPreferences.edit()
-                switch(data.getStringExtra(Settings.COLOR_KEY)){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == SETTINGS) {
+            if (resultCode == RESULT_OK) {
+                SharedPreferences.Editor preferenceEditor = mPreferences.edit();
+                switch (data.getStringExtra(Settings.COLOR_KEY)) {
                     case "Default":
                         preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.default_background));
                         mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.default_background));
@@ -135,6 +135,22 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
                 }
+
+                if (data.getBooleanExtra(Settings.LAST_COUNT, false)) {
+                    mCount = data.getIntExtra(Settings.COUNT_KEY, 0);
+                    preferenceEditor.putInt(COUNT_KEY, mCount);
+                    mShowCountTextView.setText(String.format("%s", mCount));
+                }
+                preferenceEditor.apply();
+            } else if (resultCode == Settings.RESULT_RESET) {
+                SharedPreferences.Editor preferenceEditor = mPreferences.edit();
+                mCount = 0;
+                mShowCountTextView.setBackgroundColor(getResources().getColor(R.color.default_background));
+                preferenceEditor.putInt(COUNT_KEY, mCount);
+                preferenceEditor.putInt(COLOR_KEY, getResources().getColor(R.color.default_background));
+
+
+                preferenceEditor.apply();
             }
         }
     }
