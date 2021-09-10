@@ -64,5 +64,10 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="my_name">Sumiya Sadia</string>
+    <string name="my_DOB">4/06/1997</string>
+    <string name="my_NID">012345678946512341312</string>
+    <string name="my_blood_group">B+</string>
+    <string name="tag_option">Tag:</string>
 
 </resources>

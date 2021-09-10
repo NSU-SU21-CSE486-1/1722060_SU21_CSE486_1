@@ -31,15 +31,16 @@ public class UniversityAffiliation extends AppCompatActivity implements AdapterV
             "com.android.sadia.project01.extra.MESSAGE7";
 
 
-    public Spinner uniNameEditText;
-    public Spinner departmentEditText;
-    public EditText studentIdEditText;
-    public Spinner studyLevelEditText;
+    private Spinner uniNameEditText;
+    private Spinner departmentEditText;
+    private EditText studentIdEditText;
+    private Spinner studyLevelEditText;
 
     public String name_message;
     public String dob_message;
     public String nid_message;
     public String bloodGroup_message;
+
     public String department_message;
     public String studentId_message;
     public String studyLevel_message;
