@@ -14,8 +14,8 @@ public class UniCluBzList {
     private int student_id;
     private String study_level ;
     private String email;
-    private String tags;
-    private int phone_numbers;
+    //private String tags;
+    //private int phone_numbers;
 
 
     public UniCluBzList(String university_name, String department, int student_id,
@@ -26,8 +26,8 @@ public class UniCluBzList {
         this.student_id = student_id;
         this.study_level = study_level;
         this.email = email;
-        this.tags = tags;
-        this.phone_numbers = phone_numbers;
+        //this.tags = tags;
+        //this.phone_numbers = phone_numbers;
     }
 
     public void setId(int id) {
@@ -58,11 +58,11 @@ public class UniCluBzList {
         return email;
     }
 
-    public String getTags() {
+    /*public String getTags() {
         return tags;
     }
 
     public int getPhone_numbers() {
         return phone_numbers;
-    }
+    }*/
 }
