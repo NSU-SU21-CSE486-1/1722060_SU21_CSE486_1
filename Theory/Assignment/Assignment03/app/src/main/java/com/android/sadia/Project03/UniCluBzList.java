@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "university_affiliation_table")
-public class UniversityAffiliationList {
+public class UniCluBzList {
 
     @PrimaryKey(autoGenerate = true)
     private int id;
@@ -14,15 +14,20 @@ public class UniversityAffiliationList {
     private int student_id;
     private String study_level ;
     private String email;
+    private String tags;
+    private int phone_numbers;
 
 
-    public UniversityAffiliationList(String university_name, String department,
-                                     int student_id, String study_level, String email) {
+    public UniCluBzList(String university_name, String department, int student_id,
+                        String study_level, String email, String tags, int phone_numbers)
+    {
         this.university_name = university_name;
         this.department = department;
         this.student_id = student_id;
         this.study_level = study_level;
         this.email = email;
+        this.tags = tags;
+        this.phone_numbers = phone_numbers;
     }
 
     public void setId(int id) {
@@ -51,5 +56,13 @@ public class UniversityAffiliationList {
 
     public String getEmail() {
         return email;
+    }
+
+    public String getTags() {
+        return tags;
+    }
+
+    public int getPhone_numbers() {
+        return phone_numbers;
     }
 }
