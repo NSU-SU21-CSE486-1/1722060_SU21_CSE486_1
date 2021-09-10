@@ -8,36 +8,51 @@
     tools:context=".UniCluBz">
 
     <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tablayout1"
         android:background="@color/megenta_pink"
-        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
         app:tabSelectedTextColor="@color/purple_700"
-        app:tabIndicatorColor="@color/white">
+        app:tabTextColor="@color/white">
 
-         <com.google.android.material.tabs.TabItem
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:id="@+id/tab1"
-             android:text="Student Information"/>
         <com.google.android.material.tabs.TabItem
+            android:id="@+id/tab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Student Information" />
+
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tab2"
-            android:text="University Affiliation"/>
-        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="University Affiliation" />
+
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tab3"
-            android:text="Phone Number"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number" />
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="630dp">
 
+    </androidx.viewpager.widget.ViewPager>
+
+
+    <Button
+        android:id="@+id/submit_button1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/megenta_pink"
+        android:fontFamily="sans-serif-medium"
+        android:text="Submit"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/vpager" />
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
