@@ -19,7 +19,7 @@ public class UniCluBzList {
 
 
     public UniCluBzList(String university_name, String department, int student_id,
-                        String study_level, String email, String tags, int phone_numbers)
+                        String study_level, String email)
     {
         this.university_name = university_name;
         this.department = department;
