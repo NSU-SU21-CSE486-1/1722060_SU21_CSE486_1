@@ -1,9 +1,12 @@
 package com.android.sadia.Project03;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 
@@ -23,8 +26,8 @@ public class UniCluBz extends AppCompatActivity {
     ViewPager viewPager;
     PageAdapter pageAdapter;
     private FragmentUniversityAffiliation fragmentA;
-    private ftab2 fragmentB;
     private UniCluBzListViewModel uniCluBzListViewModel;
+    private Fragment ftab1,ftab2,ftab3;
 
 
     @Override
@@ -32,13 +35,19 @@ public class UniCluBz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uniclubz);
 
-        uniCluBzListViewModel = ViewModelProviders.of(this).get(UniCluBzListViewModel.class);
-        uniCluBzListViewModel.getAllUniCluBzLists().observe(this, new Observer<List<UniCluBzList>>() {
+        RecyclerView recyclerView = findViewById(R.id.recyclerView1);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setHasFixedSize(true);
+
+        UniCluBzAdapter adapter = new UniCluBzAdapter();
+        recyclerView.setAdapter(adapter);
+
+        uniCluBzListViewModel = ViewModelProviders.of(ftab2).get(UniCluBzListViewModel.class);
+        uniCluBzListViewModel.getAllUniCluBzLists().observe(ftab2, new Observer<List<UniCluBzList>>() {
             @Override
             public void onChanged(List<UniCluBzList> uniCluBzLists) {
-                
-                Toast toast = Toast.makeText(UniCluBz.this, "On Changed", Toast.LENGTH_LONG);
-                toast.show();
+
+                adapter.setUniCluBzLists(uniCluBzLists);
             }
         });
 
@@ -49,7 +58,7 @@ public class UniCluBz extends AppCompatActivity {
         tabItem3 = (TabItem) findViewById(R.id.tab3);
         viewPager = (ViewPager) findViewById(R.id.vpager);
         fragmentA = new FragmentUniversityAffiliation();
-        fragmentB = new ftab2();
+
 
 
 
