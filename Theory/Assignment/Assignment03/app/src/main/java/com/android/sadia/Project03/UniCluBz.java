@@ -42,8 +42,8 @@ public class UniCluBz extends AppCompatActivity {
         UniCluBzAdapter adapter = new UniCluBzAdapter();
         recyclerView.setAdapter(adapter);
 
-        uniCluBzListViewModel = ViewModelProviders.of(ftab2).get(UniCluBzListViewModel.class);
-        uniCluBzListViewModel.getAllUniCluBzLists().observe(ftab2, new Observer<List<UniCluBzList>>() {
+        uniCluBzListViewModel = ViewModelProviders.of(this).get(UniCluBzListViewModel.class);
+        uniCluBzListViewModel.getAllUniCluBzLists().observe(this, new Observer<List<UniCluBzList>>() {
             @Override
             public void onChanged(List<UniCluBzList> uniCluBzLists) {
 
