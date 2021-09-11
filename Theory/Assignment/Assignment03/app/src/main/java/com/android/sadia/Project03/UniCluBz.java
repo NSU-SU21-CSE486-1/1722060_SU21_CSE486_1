@@ -39,8 +39,9 @@ public class UniCluBz extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        UniCluBzAdapter adapter = new UniCluBzAdapter();
-        recyclerView.setAdapter(adapter);
+        final UniCluBzAdapter adapter = new UniCluBzAdapter();
+
+
 
         uniCluBzListViewModel = ViewModelProviders.of(this).get(UniCluBzListViewModel.class);
         uniCluBzListViewModel.getAllUniCluBzLists().observe(this, new Observer<List<UniCluBzList>>() {
@@ -48,6 +49,10 @@ public class UniCluBz extends AppCompatActivity {
             public void onChanged(List<UniCluBzList> uniCluBzLists) {
 
                 adapter.setUniCluBzLists(uniCluBzLists);
+
+
+                Toast toast = Toast.makeText(UniCluBz.this, "ViewModel is Working",Toast.LENGTH_LONG);
+                toast.show();
             }
         });
 

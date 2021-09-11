@@ -35,11 +35,11 @@
             android:text="Phone Number" />
     </com.google.android.material.tabs.TabLayout>
 
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpager"
         android:layout_width="match_parent"
         android:layout_height="630dp">
-
     </androidx.viewpager.widget.ViewPager>
 
 

@@ -1,7 +1,9 @@
 package com.android.sadia.Project03;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,9 +14,11 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 
 
 public class FragmentUniversityAffiliation extends Fragment implements AdapterView.OnItemSelectedListener {
+    private UniCluBzListViewModel viewModel;
 
     private Spinner uniNameEditText;
     private Spinner departmentEditText;
@@ -33,19 +37,10 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
 
     private String mParam1;
     private String mParam2;
+    private Context context;
 
     public FragmentUniversityAffiliation() {
 
-    }
-
-
-    public static FragmentUniversityAffiliation newInstance(String param1, String param2) {
-        FragmentUniversityAffiliation fragment = new FragmentUniversityAffiliation();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
     }
 
     @Override
@@ -70,7 +65,7 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
     }
 
     public interface FragmentUniversityAffiliationListener{
-        onInputFUASend(CharSequence input);
+        void onInputFUASend(CharSequence input);
     }
 
     @Override
@@ -84,7 +79,7 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
         if (uniNameEditText != null) {
             uniNameEditText.setOnItemSelectedListener(this);
         }
-        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapter1 = ArrayAdapter.createFromResource(context,
                 R.array.university, android.R.layout.simple_spinner_item);
         adapter1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         if (uniNameEditText != null) {
@@ -96,7 +91,7 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
         if (departmentEditText != null) {
             departmentEditText.setOnItemSelectedListener(this);
         }
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(context,
                 R.array.department, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         if (departmentEditText != null) {
@@ -109,7 +104,7 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
         if (studyLevelEditText != null) {
             studyLevelEditText.setOnItemSelectedListener(this);
         }
-        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
+        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(context,
                 R.array.study_level, android.R.layout.simple_spinner_item);
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         if (studyLevelEditText != null) {
@@ -121,10 +116,60 @@ public class FragmentUniversityAffiliation extends Fragment implements AdapterVi
             @Override
             public void onClick(View v) {
 
+                //viewModel.setText(emailEditText.getText());
+
+                /*CharSequence input = (CharSequence) uniNameEditText.getSelectedItem().toString();
+                listener.onInputFUASend(input);
+                CharSequence input1 = (CharSequence) departmentEditText.getSelectedItem().toString();
+                listener.onInputFUASend(input1);
+                CharSequence input2 = studentIdEditText.getText();
+                listener.onInputFUASend(input2);
+                CharSequence input3 = (CharSequence) studyLevelEditText.getSelectedItem().toString();
+                listener.onInputFUASend(input3);
+                CharSequence input4 = emailEditTex*/
             }
-            
+
         });
         return v;
     }
 
+
+    /*public void updateUniNameEditText(ArrayAdapter<CharSequence> Adapter1) {
+        uniNameEditText.setAdapter(Adapter1);
+    }
+
+    public void updateDepartmentEditText(ArrayAdapter<CharSequence> Adapter2) {
+        departmentEditText.setAdapter(Adapter2);
+    }
+
+    public void updateStudentIdEditText(CharSequence newText1) {
+        studentIdEditText.setText(newText1);
+    }
+
+    public void updateStudyLevelEditText(ArrayAdapter<CharSequence> Adapter3) {
+        studyLevelEditText.setAdapter(Adapter3);
+    }
+
+    public void updateEmailEditText(CharSequence newText2) {
+        emailEditText.setText(newText2);
+    }*/
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if(context instanceof FragmentUniversityAffiliationListener){
+            listener = (FragmentUniversityAffiliationListener) context;
+        }
+        else{
+            throw new RuntimeException(context.toString() +
+                    "You Need to Implement FragmentUniversityAffiliationListener");
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        listener = null;
+    }
 }

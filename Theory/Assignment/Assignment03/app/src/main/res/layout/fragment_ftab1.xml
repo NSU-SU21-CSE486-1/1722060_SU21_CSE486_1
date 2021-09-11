@@ -16,6 +16,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/username"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,6 +29,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/date_of_birth"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/show_name"
         app:layout_constraintTop_toBottomOf="@+id/show_name" />
 
@@ -38,6 +42,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/nid_number"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/show_dob"
         app:layout_constraintTop_toBottomOf="@+id/show_dob" />
 
@@ -49,8 +55,67 @@
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/b_group"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/purple_700"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/show_nid"
         app:layout_constraintTop_toBottomOf="@+id/show_nid" />
+
+    <TextView
+        android:id="@+id/show_name_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/my_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/megenta_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/show_name"
+        app:layout_constraintStart_toEndOf="@+id/show_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/show_dob_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/my_DOB"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/megenta_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/show_dob"
+        app:layout_constraintStart_toEndOf="@+id/show_dob"
+        app:layout_constraintTop_toBottomOf="@+id/show_name_field" />
+
+    <TextView
+        android:id="@+id/show_nid_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/my_NID"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/megenta_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/show_nid"
+        app:layout_constraintStart_toEndOf="@+id/show_nid"
+        app:layout_constraintTop_toBottomOf="@+id/show_dob_field" />
+
+    <TextView
+        android:id="@+id/show_blood_group_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/my_blood_group"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/megenta_pink"
+        app:layout_constraintBottom_toBottomOf="@+id/show_blood_group"
+        app:layout_constraintStart_toEndOf="@+id/show_blood_group"
+        app:layout_constraintTop_toBottomOf="@+id/show_nid_field" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
