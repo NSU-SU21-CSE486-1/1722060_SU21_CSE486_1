@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563766381374",
+    "project_id": "uniclubz-b082b",
+    "storage_bucket": "uniclubz-b082b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563766381374:android:f46748f68d4b897390ba6f",
+        "android_client_info": {
+          "package_name": "com.android.sadia.uniclubz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563766381374-ealvcgu9hvpq5fhsj1avhi6ntkurnoh3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3teRFSgCoQKd-zvMwZzMh1rxCHx-q4Nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563766381374-ealvcgu9hvpq5fhsj1avhi6ntkurnoh3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
