@@ -35,11 +35,11 @@ public class UniCluBz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_uniclubz);
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerView1);
+        /*RecyclerView recyclerView = findViewById(R.id.recyclerView1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        final UniCluBzAdapter adapter = new UniCluBzAdapter();
+        final UniCluBzAdapter adapter = new UniCluBzAdapter();*/
 
 
 
@@ -48,7 +48,7 @@ public class UniCluBz extends AppCompatActivity {
             @Override
             public void onChanged(List<UniCluBzList> uniCluBzLists) {
 
-                adapter.setUniCluBzLists(uniCluBzLists);
+                //adapter.setUniCluBzLists(uniCluBzLists);
 
 
                 Toast toast = Toast.makeText(UniCluBz.this, "ViewModel is Working",Toast.LENGTH_LONG);
