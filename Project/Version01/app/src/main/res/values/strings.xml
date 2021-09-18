@@ -31,6 +31,7 @@
     <string name="signup">Signup</string>
     <string name="login">Log In</string>
     <string name="logout">Logout</string>
+    <string name="home">Home</string>
 
     <string-array name="university_list">
         <item>University</item>

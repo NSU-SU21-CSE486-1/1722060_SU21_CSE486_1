@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         loginButton = findViewById(R.id.login_button);
         loginButton.setOnClickListener(this);
+
     }
 
         @Override
@@ -64,25 +65,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String email = emailEditText.getText().toString().trim();
         String pass = passwordEditText.getText().toString().trim();
 
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             emailEditText.setError("Email Address Required!");
             emailEditText.requestFocus();
             return;
         }
 
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             emailEditText.setError("Please Provide Valid Email");
             emailEditText.requestFocus();
             return;
         }
 
-        if(pass.isEmpty()){
+        if (pass.isEmpty()) {
             passwordEditText.setError("Password Required!");
             passwordEditText.requestFocus();
             return;
         }
 
-        if(pass.length() < 6){
+        if (pass.length() < 6) {
             passwordEditText.setError("Password Cannot be Less than 6 Characters");
             passwordEditText.requestFocus();
             return;
@@ -91,14 +92,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth.signInWithEmailAndPassword(email, pass)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull @NotNull Task<AuthResult> task){
-                        if(task.isSuccessful()){
+                    public void onComplete(@NonNull @NotNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
                             startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-                        } else{
+                        } else {
                             Toast toast = Toast.makeText(MainActivity.this,
                                     "Failed to Login", Toast.LENGTH_LONG);
                             toast.show();
                         }
                     }
                 });
+    }
 }
