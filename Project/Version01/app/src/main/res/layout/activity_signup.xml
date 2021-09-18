@@ -15,6 +15,7 @@
         android:id="@+id/sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/sign_up"
         android:textColor="@color/megenta_pink"
@@ -82,7 +83,7 @@
         android:id="@+id/input_email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="@string/email_address"
         android:inputType="textEmailAddress"
@@ -119,7 +120,7 @@
         android:id="@+id/spinner_university"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:textAlignment="gravity"
         app:layout_constraintEnd_toEndOf="@+id/input_phone"
         app:layout_constraintStart_toStartOf="@+id/input_phone"
@@ -145,11 +146,25 @@
         app:layout_constraintStart_toStartOf="@+id/input_student_id"
         app:layout_constraintTop_toBottomOf="@+id/input_student_id" />
 
+    <EditText
+        android:id="@+id/input_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_study_level"
+        app:layout_constraintStart_toStartOf="@+id/spinner_study_level"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_study_level" />
+
+
     <Button
         android:id="@+id/signup_button"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
+        android:layout_marginBottom="48dp"
         android:backgroundTint="@color/megenta_pink"
         android:fontFamily="@font/poppins_semibold"
         android:padding="4dp"
@@ -163,7 +178,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner_study_level"
+        app:layout_constraintTop_toBottomOf="@+id/input_password"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
