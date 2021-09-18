@@ -54,7 +54,7 @@
         android:id="@+id/sign_up"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_marginStart="40dp"
         android:layout_marginEnd="30dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="@string/sign_up"
@@ -65,6 +65,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/sign_in"
         app:layout_constraintTop_toTopOf="@+id/sign_in" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:backgroundTint="@color/megenta_pink"
+        android:fontFamily="@font/poppins_semibold"
+        android:padding="4dp"
+        android:text="Login"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
