@@ -2,6 +2,7 @@ package com.android.sadia.notifyme;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.os.Bundle;
 import android.view.View;
@@ -35,5 +36,13 @@ public class MainActivity extends AppCompatActivity {
     {
         mNotifyManager = (NotificationManager)
                 getSystemService(NOTIFICATION_SERVICE);
+        if (android.os.Build.VERSION.SDK_INT >=
+                android.os.Build.VERSION_CODES.O) {
+            // Create a NotificationChannel
+            NotificationChannel notificationChannel = new NotificationChannel(PRIMARY_CHANNEL_ID,
+                    "Mascot Notification", NotificationManager
+                    .IMPORTANCE_HIGH);
+        }
     }
+
 }
