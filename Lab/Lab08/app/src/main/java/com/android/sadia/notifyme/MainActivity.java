@@ -36,6 +36,22 @@ public class MainActivity extends AppCompatActivity {
                 sendNotification();
             }
         });
+
+        button_update = findViewById(R.id.update);
+        button_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Update the notification
+            }
+        });
+
+        button_cancel = findViewById(R.id.cancel);
+        button_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Cancel the notification
+            }
+        });
     }
 
     public void sendNotification() {
