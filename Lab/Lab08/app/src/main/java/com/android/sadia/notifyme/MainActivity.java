@@ -49,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction(ACTION_CANCEL_NOTIFICATION);
+        intentFilter.addAction(ACTION_UPDATE_NOTIFICATION);
+        createNotificationChannel();
+
+        registerReceiver(mReceiver,new IntentFilter(ACTION_CANCEL_NOTIFICATION));
+
+        registerReceiver(mReceiver,new IntentFilter(ACTION_UPDATE_NOTIFICATION));
+
 
 
         button_update = findViewById(R.id.update);
@@ -66,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 cancelNotification();
             }
         });
+
         setNotificationButtonState(true, false, false);
-        registerReceiver(mReceiver,new IntentFilter(ACTION_UPDATE_NOTIFICATION));
+
     }
 
     @Override
@@ -82,11 +92,13 @@ public class MainActivity extends AppCompatActivity {
         PendingIntent updatePendingIntent = PendingIntent.getBroadcast
                 (this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
 
-
+        Intent cancelIntent = new Intent(ACTION_CANCEL_NOTIFICATION);
+        PendingIntent cancelPendingIntent = PendingIntent.getBroadcast
+                (this, NOTIFICATION_ID, cancelIntent, PendingIntent.FLAG_ONE_SHOT);
 
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         notifyBuilder.addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent);
-
+        notifyBuilder.setDeleteIntent(cancelPendingIntent);
 
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
 
@@ -126,9 +138,9 @@ public class MainActivity extends AppCompatActivity {
                 .setContentText("This is your notification text.")
                 .setSmallIcon(R.drawable.ic_android)
                 .setContentIntent(notificationPendingIntent)
-                .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setDefaults(NotificationCompat.DEFAULT_ALL);
+                .setDefaults(NotificationCompat.DEFAULT_ALL)
+                .setAutoCancel(true);
 
         return notifyBuilder;
     }
@@ -141,6 +153,11 @@ public class MainActivity extends AppCompatActivity {
         notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
                 .bigPicture(androidImage)
                 .setBigContentTitle("Notification Updated!"));
+
+        Intent cancelIntent = new Intent(ACTION_CANCEL_NOTIFICATION);
+        PendingIntent cancelPendingIntent = PendingIntent.getBroadcast
+                (this, NOTIFICATION_ID, cancelIntent, PendingIntent.FLAG_ONE_SHOT);
+        notifyBuilder.setDeleteIntent(cancelPendingIntent);
 
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
         setNotificationButtonState(false, false, true);
