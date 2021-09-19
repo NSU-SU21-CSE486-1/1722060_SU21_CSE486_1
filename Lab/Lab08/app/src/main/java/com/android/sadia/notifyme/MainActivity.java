@@ -7,6 +7,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -100,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void updateNotification() {
+        Bitmap androidImage = BitmapFactory
+                .decodeResource(getResources(),R.drawable.mascot_1);
+        NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
+        notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
+                .bigPicture(androidImage)
+                .setBigContentTitle("Notification Updated!"));
+        mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
 
     }
 
