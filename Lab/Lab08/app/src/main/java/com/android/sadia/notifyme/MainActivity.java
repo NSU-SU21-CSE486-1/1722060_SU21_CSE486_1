@@ -99,5 +99,14 @@ public class MainActivity extends AppCompatActivity {
         return notifyBuilder;
     }
 
+    public void updateNotification() {
+
+    }
+
+
+    public void cancelNotification() {
+        
+    }
+
 
 }
