@@ -30,4 +30,10 @@ public class MainActivity extends AppCompatActivity {
     public void sendNotification() {
 
     }
+
+    public void createNotificationChannel()
+    {
+        mNotifyManager = (NotificationManager)
+                getSystemService(NOTIFICATION_SERVICE);
+    }
 }
