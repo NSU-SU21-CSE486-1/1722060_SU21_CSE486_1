@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         button_update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Update the notification
+                updateNotification();
             }
         });
 
