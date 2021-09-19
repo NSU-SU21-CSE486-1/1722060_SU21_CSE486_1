@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         button_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Cancel the notification
+                cancelNotification();
             }
         });
     }
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 .setContentIntent(notificationPendingIntent)
                 .setAutoCancel(true)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setDefaults(NotificationCompat.DEFAULT_ALL);;
+                .setDefaults(NotificationCompat.DEFAULT_ALL);
 
         return notifyBuilder;
     }
@@ -105,7 +105,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void cancelNotification() {
-        
+
+        mNotifyManager.cancel(NOTIFICATION_ID);
     }
 
 
