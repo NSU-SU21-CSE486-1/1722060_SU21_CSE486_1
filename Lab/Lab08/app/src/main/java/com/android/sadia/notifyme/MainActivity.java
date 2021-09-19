@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String ACTION_UPDATE_NOTIFICATION =
             "com.example.android.notifyme.ACTION_UPDATE_NOTIFICATION";
+    private static final String ACTION_CANCEL_NOTIFICATION =
+            "com.example.android.notifyme.ACTION_CANCEL_NOTIFICATION";
 
     private NotificationReceiver mReceiver = new NotificationReceiver();
 
@@ -46,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 sendNotification();
             }
         });
+
+
 
         button_update = findViewById(R.id.update);
         button_update.setOnClickListener(new View.OnClickListener() {
@@ -78,8 +82,12 @@ public class MainActivity extends AppCompatActivity {
         PendingIntent updatePendingIntent = PendingIntent.getBroadcast
                 (this, NOTIFICATION_ID, updateIntent, PendingIntent.FLAG_ONE_SHOT);
 
+
+
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         notifyBuilder.addAction(R.drawable.ic_update, "Update Notification", updatePendingIntent);
+
+
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
 
 
@@ -128,12 +136,15 @@ public class MainActivity extends AppCompatActivity {
     public void updateNotification() {
         Bitmap androidImage = BitmapFactory
                 .decodeResource(getResources(),R.drawable.mascot_1);
+
         NotificationCompat.Builder notifyBuilder = getNotificationBuilder();
         notifyBuilder.setStyle(new NotificationCompat.BigPictureStyle()
                 .bigPicture(androidImage)
                 .setBigContentTitle("Notification Updated!"));
+
         mNotifyManager.notify(NOTIFICATION_ID, notifyBuilder.build());
         setNotificationButtonState(false, false, true);
+
 
     }
 
@@ -159,7 +170,15 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            updateNotification();
+            switch(intent.getAction()){
+                case ACTION_UPDATE_NOTIFICATION:
+                    updateNotification();
+                    break;
+
+                case ACTION_CANCEL_NOTIFICATION:
+                    cancelNotification();
+                    break;
+            }
         }
     }
 
