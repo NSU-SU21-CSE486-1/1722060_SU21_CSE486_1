@@ -9,6 +9,7 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -25,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     private NotificationManager mNotifyManager;
 
     private static final int NOTIFICATION_ID = 0;
+
+    private static final String ACTION_UPDATE_NOTIFICATION =
+            "com.example.android.notifyme.ACTION_UPDATE_NOTIFICATION";
+
+    private NotificationReceiver mReceiver = new NotificationReceiver();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setNotificationButtonState(true, false, false);
+        registerReceiver(mReceiver,new IntentFilter(ACTION_UPDATE_NOTIFICATION));
+    }
+
+    @Override
+    protected void onDestroy() {
+        unregisterReceiver(mReceiver);
+        super.onDestroy();
     }
 
     public void sendNotification() {
